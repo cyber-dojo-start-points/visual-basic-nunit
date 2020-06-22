@@ -1,13 +1,14 @@
 {
   "display_name": "VisualBasic, NUnit",
-  "image_name": "cyberdojofoundation/visual_basic_nunit",
-  "visible_filenames":
-  [
+  "image_name": "cyberdojofoundation/visual_basic_nunit:003c9f0",
+  "visible_filenames": [
     "HikerTest.vb",
     "Hiker.vb",
     "cyber-dojo.sh"
   ],
-  "filename_extension": [ ".vb" ],
+  "filename_extension": [
+    ".vb"
+  ],
   "max_seconds": 10,
   "tab_size": 4
 }
