@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/cyber-dojo-start-points/visual-basic-nunit.svg?style=svg)](https://circleci.com/gh/cyber-dojo-start-points/visual-basic-nunit)
+[![GitHub CI](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml)
 
 ### display_name="VisualBasic, NUnit"
 ### image_name="[cyberdojofoundation/visual_basic_nunit](https://hub.docker.com/repository/docker/cyberdojofoundation/visual_basic_nunit)"
