@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsPackable>false</IsPackable>
+    <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+    <AnalysisLevel>none</AnalysisLevel>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+    <RunAnalyzers>false</RunAnalyzers>
+
+    <!-- Hiker.vb and HikerTest.vb sit in no namespace, so the project must not
+         wrap them in one; RootNamespace otherwise defaults to the project name. -->
+    <RootNamespace></RootNamespace>
+    <!-- The My.* namespace pulls in types that are not referenced here. -->
+    <MyType>Empty</MyType>
+
+    <Optimize>true</Optimize>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>  <!-- No extra lang packs -->
+
+    <!-- If no large constants / resources -->
+    <UseRidGraph>false</UseRidGraph>
+
+    <EnableNUnitRunner>true</EnableNUnitRunner>  <!-- Enables MTP-based NUnit runner -->
+    <OutputType>Exe</OutputType> <!-- Builds a runnable exe -->
+    <DebugType>embedded</DebugType> <!-- No separate .pdb file -> faster emit -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.0" />
+    <PackageReference Include="NUnit" Version="4.3.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>

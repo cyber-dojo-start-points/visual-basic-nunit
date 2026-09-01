@@ -1,22 +1,28 @@
 {
-  "display_name": "VisualBasic, NUnit",
+  "image_name": "ghcr.io/cyber-dojo-languages/visual_basic_nunit:64da42c",
+  "display_name": "VisualBasic 10.0.103, NUnit 4.3.2",
   "language": [
     "VisualBasic",
-    ""
+    "10.0.103"
   ],
   "test_framework": [
     "NUnit",
-    ""
+    "4.3.2"
   ],
-  "image_name": "cyberdojofoundation/visual_basic_nunit:003c9f0",
   "visible_filenames": [
+    "cyber-dojo.sh",
     "HikerTest.vb",
     "Hiker.vb",
-    "cyber-dojo.sh"
+    "dojo.vbproj"
   ],
+  "rag_lambda": "red_amber_green.rb",
   "filename_extension": [
     ".vb"
   ],
-  "max_seconds": 10,
-  "tab_size": 4
+  "max_seconds": 15,
+  "tab_size": 4,
+  "progress_regexs": [
+    "^\\s+Failed Tests - Failures: \\d+",
+    "Passed: \\d+"
+  ]
 }
