@@ -17,19 +17,27 @@ function cyber_dojo_exit()
 cyber_dojo_enter
 trap cyber_dojo_exit EXIT SIGTERM
 
-readonly REF=/usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.3/ref/net10.0
+# One reference pack is installed, and its version moves as .NET is updated,
+# so it is found rather than written out. It carries its own version, which
+# is not the compiler's, so the two are found separately.
+readonly REF=$(echo /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/*/ref/net*)
 
 #FALLBACK, SLOWER ~5.4s:
 # comment in the next line if compilation fails
 #time (ln -s /home/sandbox/dotnet_obj obj && dotnet test --no-restore --nologo ) ; exit
 
 #FAST ~1.2s:
-ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll nunit.framework.dll
+# NUnit's version moves too, so that half of the path is found as well.
+ln -s $(echo ~/.nuget/packages/nunit/*/lib/net8.0/nunit.framework.dll) nunit.framework.dll
 #in order to use legacy asserts eg: ClassicAssert.AreEqual(42, 42)
 # add on top of the .vb file: Imports NUnit.Framework.Legacy
-ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.legacy.dll nunit.framework.legacy.dll
+ln -s $(echo ~/.nuget/packages/nunit/*/lib/net8.0/nunit.framework.legacy.dll) nunit.framework.legacy.dll
 
-time (dotnet /usr/share/dotnet/sdk/10.0.103/Roslyn/bincore/vbc.dll \
+# One .NET SDK is installed, and its version moves as .NET is updated, so
+# the compiler is found rather than written out.
+readonly VBC=$(echo /usr/share/dotnet/sdk/*/Roslyn/bincore/vbc.dll)
+
+time (dotnet ${VBC} \
   -target:library \
   -nologo \
   -nostdlib \
