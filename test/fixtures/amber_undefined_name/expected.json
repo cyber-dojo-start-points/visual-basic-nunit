@@ -1,0 +1,7 @@
+{
+  "matches": [ "^/sandbox/HikerTest\\.vb\\([0-9]+\\) : error BC30456: 'Ansewr' is not a member of 'Hiker'\\.$" ],
+  "match_counts": {
+    "^  Test Count: ": 0,
+    "^  Overall result: ": 0
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "matches": [ "^/sandbox/hiker_tests\\.vb\\([0-9]+\\) : error BC30198: '\\)' expected\\.$" ],
+  "match_counts": {
+    "^  Test Count: ": 0,
+    "^  Overall result: ": 0
+  }
+}

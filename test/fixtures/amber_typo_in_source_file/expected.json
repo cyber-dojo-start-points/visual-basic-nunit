@@ -1,0 +1,4 @@
+{
+  "max_output_lines": 12,
+  "matches": [ "^/sandbox/Hiker\\.vb\\([0-9]+\\) : error BC30451: 'sevn' is not declared\\." ]
+}

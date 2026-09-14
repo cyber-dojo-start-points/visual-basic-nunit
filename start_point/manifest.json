@@ -1,9 +1,9 @@
 {
   "image_name": "ghcr.io/cyber-dojo-languages/visual_basic_nunit:4db9cf2",
-  "display_name": "VisualBasic 10.0, NUnit 4.3",
+  "display_name": "VisualBasic 17.13, NUnit 4.3",
   "language": [
     "VisualBasic",
-    "10.0"
+    "17.13"
   ],
   "test_framework": [
     "NUnit",
