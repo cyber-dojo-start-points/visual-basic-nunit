@@ -19,7 +19,6 @@
   "filename_extension": [
     ".vb"
   ],
-  "max_seconds": 15,
   "tab_size": 4,
   "progress_regexs": [
     "^\\s+Failed Tests - Failures: \\d+",
